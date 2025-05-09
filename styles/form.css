@@ -1,0 +1,37 @@
+.logo {
+    margin-bottom: 2rem;
+}
+
+.refund-form {
+    max-width: 28.875rem;
+    display: flex;
+    flex-direction: column;
+
+    & p {
+        display: block;
+        margin: 0.75rem 0 2.5rem;
+    }
+
+    & .input-group {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    & label {
+        margin-bottom: .5rem;
+        text-transform: uppercase;
+        font: 400 12px/14px var(--ff-base);
+    }
+
+    & .input-row {
+        display: flex;
+        gap: 1rem;
+
+        margin: 1rem 0 2rem;
+    }
+
+    & .input-group, & .input-row {
+        flex: 1;
+    }
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Refund</title>
+    <!-- font import -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap" rel="stylesheet">
+    <!-- css -->
+    <link rel="stylesheet" href="./styles/index.css">
+    <!-- js -->
+     <script src="./main.js" defer></script>
+    <!-- phosphor icons -->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+</head>
+
+<body>
+    <main>
+        <img class="logo" src="./images/logo.svg" alt="refund logo">
+
+        <section>
+            <form class="refund-form">
+                <h1>Solicitação de reembolso</h1>
+                <p>Informe os dados da despesa para solicitar reembolso.<br>A despesa será analisada e reembolsada em até 30 dias.</p>
+
+                <div class="input-group">
+                    <label for="expense-title">título da despesa</label>
+                    <input type="text" name="expense-title" id="expense-title" required autocomplete="off">
+                </div>
+
+                <div class="input-row">
+                    <div class="input-group">
+                        <label for="category">categoria</label>
+                        <select name="category" id="category" required>
+                            <option value="" selected disabled>Selecione</option>
+                            <option value="food">Alimentação</option>
+                            <option value="accommodation">Hospedagem</option>
+                            <option value="services">Serviços</option>
+                            <option value="transport">Transporte</option>
+                            <option value="others">Outros</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label for="amount">valor</label>
+                        <input type="text" name="amount" id="amount" placeholder="R$0,00" required autocomplete="off">
+                    </div>
+                </div>
+
+                <button class="add-expense-btn">Adicionar despesa</button>
+            </form>
+
+            <aside>
+                <header>
+                    <p>
+                        Minhas solicitações <i>&bullet;</i>
+                        <span>0 despesas</span>
+                    </p>
+                    <h2 contenteditable="true"><span class="currency">R$</span>0,00</h2>
+                </header>
+
+                <ul class="expense-container">
+                    <!-- <li class="expense">
+                        <i class="ph-fill ph-fork-knife"></i>
+
+                        <div class="expense-info">
+                            <strong>Almoço</strong>
+                            <span>Alimentação</span>
+                        </div>
+
+                        <p class="expense-price"><span class="currency">R$</span>0,00</p>
+
+                        <i class="ph ph-x"></i>
+                    </li> -->
+                </ul>
+            </aside>
+        </section>
+    </main>
+</body>
+
+</html>

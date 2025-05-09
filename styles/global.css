@@ -1,0 +1,134 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    /* base colors */
+    --gray-100: #1F2523;
+    --gray-200: #4D5C57;
+    --gray-300: #CDD5D2;
+    --gray-400: #E4ECE9;
+    --gray-500: #F9FBFA;
+    --white: #FFFFFF;
+
+    /* product-colors */
+    --green-100: #1F8459;
+    --green-200: #2CB178;
+
+    --danger: #B51919;
+
+    /* font */
+    --ff-base: "Open Sans", sans-serif;
+}
+
+html {
+    font-family: var(--ff-base);
+    color: var(--gray-200);
+}
+
+body {
+    background-color: var(--gray-400);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+main {
+    padding: 2rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong {
+    color: var(--gray-100);
+
+}
+
+ul {
+    list-style: none;
+}
+
+button {
+    background-color: var(--green-100);
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    color: var(--white);
+    font: 600 14px/18px var(--ff-base);
+
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+    &:hover {
+        background-color: var(--green-200);
+    }
+
+    &[disabled] {
+        background-color: rgba(31, 132, 88, 0.5);
+        cursor: initial;
+    }
+}
+
+input[type="text"],
+select {
+    padding: 16px;
+    height: 55px;
+    border: 1px solid var(--gray-300);
+    border-radius: 8px;
+    outline: none;
+
+    font: 400 14px/18px var(--ff-base);
+    color: var(--gray-100);
+    caret-color: var(--green-100);
+
+    &::placeholder {
+        color: var(--gray-200);
+    }
+
+    &:focus {
+        border: 1.5px solid var(--green-100);
+    }
+}
+
+section {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.25rem;
+}
+
+.refund-form,
+aside {
+    background-color: var(--white);
+    border-radius: 1rem;
+    padding: 2.5rem;
+}
+
+.currency {
+    font: 400 14px/16px var(--ff-base);
+    color: var(--gray-200);
+}
+
+@media (max-width: 1140px) {
+    main {
+        margin: 0 auto;
+    }
+
+    section {
+        flex-direction: column;
+    }
+
+    .refund-form,
+    aside {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+}
